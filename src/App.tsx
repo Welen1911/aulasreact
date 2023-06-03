@@ -1,20 +1,10 @@
 import React, {useState} from "react"
+import { BrowserRouter } from "react-router-dom";
+import { AppRoutes } from "./routes";
 export const App = () => {
   return (
-    <div className="App">
-      teste
-      <br />
-      <input type="text" id="num1" placeholder="Digite o primeiro número"/>
-      <input type="text" id="num2" placeholder="Digite o segundo número"/>
-      <button>Enviar</button>
-    </div>
+    <BrowserRouter>
+      <AppRoutes></AppRoutes>
+    </BrowserRouter>
   );
-}
-function somar(valor1: number, valor2: number) {
-  let resultado: number = valor1 + valor2
-  return (
-    <div>
-      {resultado}
-    </div>
-  )
 }
